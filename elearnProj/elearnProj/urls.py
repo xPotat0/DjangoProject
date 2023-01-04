@@ -16,15 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from demand.views import index as demandindex
-from geography.views import index as geoindex
-from recent.views import index as recentindex
-from skills.views import index as skilindex
+from demand.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('demand/', demandindex),
-    path('geography/', geoindex),
-    path('recent/', recentindex),
-    path('skills/', skilindex)
+    path('', index),
+    path('geography/', geography),
+
 ]

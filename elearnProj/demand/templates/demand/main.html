@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'demand/css/style.css' %}">
+	<title>GameDev</title>
+</head>
+<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+<label class="btn-menu" for="hmt">
+	<span class="first"></span>
+	<span class="second"></span>
+	<span class="third"></span>
+</label>
+<ul class="hidden-menu">
+	<li><a href="/">ГЛАВНАЯ</a></li>
+	<li><a href="">ВОСТРЕБОВАННОСТЬ</a></li>
+	<li><a href="/geography/">ГЕОГРАФИЯ</a></li>
+	<li><a href="">НАВЫКИ</a></li>
+	<li><a href="">ПОСЛЕДНИЕ 10</a></li>
+</ul>
+<header class="header">
+	<p class="title">GameVac</p>
+</header>
+{% block content %}
+{% endblock %}
+<footer>
+	<p class="name">Исмагилов Денис Рустамович</p>
+	<p class="group">РИ-210945</p>
+</footer>
+<script src="{% static 'demand/js/openjava.js' %}"></script>
+</html>
