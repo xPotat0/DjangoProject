@@ -22,5 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('geography/', geography),
+    path('demand/', demand),
+    path('skills/', skills),
+    path('last/', last)
 
 ]

@@ -1,0 +1,84 @@
+{% extends 'demand/main.html' %}
+{% block content %}
+<div class="main_1">
+	<ul class="button_spisok">
+	<li><input class="graphs_button" type="button" value="Общее количество вакансий" onclick="getView(1)"></li>
+	<li><input class="graphs_button" type="button" value="Общей уровень зарплат" onclick="getView(2)"></li>
+	<li><input class="graphs_button" type="button" value="Количество вакансий GameDev" onclick="getView(3)"></li>
+	<li><input class="graphs_button" type="button" value="Уровень зарплат GameDev" onclick="getView(4)"></li>
+	</ul>
+	<div id="div1">
+		<table border="1" class="table">
+   		<caption>Количество вакансий</caption>
+   		<tr>
+    		<th class="first_column">Год</th>
+    		<th class="second_column">Кол-во</th>
+   		</tr>
+   		<tr><td>2015</td><td>9358</td></tr>
+   		<tr><td>2016</td><td>28916</td></tr>
+   		<tr><td>2017</td><td>38682</td></tr>
+   		<tr><td>2018</td><td>58478</td></tr>
+   		<tr><td>2019</td><td>70559</td></tr>
+   		<tr><td>2020</td><td>87249</td></tr>
+   		<tr><td>2021</td><td>54116</td></tr>
+   		<tr><td>2022</td><td>17030</td></tr>
+  		</table>
+  		<img src="/static/demand/images/Graph3.png" class="graph_img" width="800" height="800">
+  	</div>
+  	<div id="div2">
+		<table border="1" class="table">
+   		<caption>Средняя заработная плата</caption>
+   		<tr>
+    		<th class="first_column">Год</th>
+    		<th class="second_column">Зарплата</th>
+   		</tr>
+   		<tr><td>2015</td><td>57259</td></tr>
+   		<tr><td>2016</td><td>67729</td></tr>
+   		<tr><td>2017</td><td>69632</td></tr>
+   		<tr><td>2018</td><td>91804</td></tr>
+   		<tr><td>2019</td><td>79153</td></tr>
+   		<tr><td>2020</td><td>75569</td></tr>
+   		<tr><td>2021</td><td>86650</td></tr>
+   		<tr><td>2022</td><td>102513</td></tr>
+  		</table>
+  		<img src="/static/demand/images/Graph1.png" class="graph_img" width="800" height="800">
+  	</div>
+  	<div id="div3">
+		<table border="1" class="table">
+   		<caption>Количество вакансий</caption>
+   		<tr>
+    		<th class="first_column">Год</th>
+    		<th class="second_column">Кол-во</th>
+   		</tr>
+   		<tr><td>2015</td><td>25</td></tr>
+   		<tr><td>2016</td><td>254</td></tr>
+   		<tr><td>2017</td><td>226</td></tr>
+   		<tr><td>2018</td><td>348</td></tr>
+   		<tr><td>2019</td><td>507</td></tr>
+   		<tr><td>2020</td><td>631</td></tr>
+   		<tr><td>2021</td><td>449</td></tr>
+   		<tr><td>2022</td><td>106</td></tr>
+  		</table>
+  		<img src="/static/demand/images/Graph4.png" class="graph_img" width="800" height="800">
+  	</div>
+  	<div id="div4">
+		<table border="1" class="table">
+   		<caption>Средняя заработная плата</caption>
+   		<tr>
+    		<th class="first_column">Год</th>
+    		<th class="second_column">Зарплата</th>
+   		</tr>
+   		<tr><td>2015</td><td>72340</td></tr>
+   		<tr><td>2016</td><td>96377</td></tr>
+   		<tr><td>2017</td><td>68372</td></tr>
+   		<tr><td>2018</td><td>86704</td></tr>
+   		<tr><td>2019</td><td>104294</td></tr>
+   		<tr><td>2020</td><td>106171</td></tr>
+   		<tr><td>2021</td><td>112443</td></tr>
+   		<tr><td>2022</td><td>141593</td></tr>
+  		</table>
+  		<img src="/static/demand/images/Graph2.png" class="graph_img" width="800" height="800">
+  	</div>
+</div>
+<div class="empty"></div>
+{% endblock %}
