@@ -1,0 +1,15 @@
+{% extends 'demand/main.html' %}
+{% block content %}
+<div class="main_2">
+{% for vac in table %}
+    <ul class="last_list">
+    {% for item in vac %}
+        <li>
+        {{ item }}
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="last_line"></div>
+{% endfor %}
+</div>
+{% endblock %}

@@ -2,175 +2,32 @@
 {% block content %}
 <div class="main_1">
 	<ul class="button_spisok_2">
-	<li><input class="graphs_button" type="button" value="2015" onclick="getView(111)"></li>
-	<li><input class="graphs_button" type="button" value="2016" onclick="getView(222)"></li>
-	<li><input class="graphs_button" type="button" value="2017" onclick="getView(333)"></li>
-	<li><input class="graphs_button" type="button" value="2018" onclick="getView(444)"></li>
-	<li><input class="graphs_button" type="button" value="2019" onclick="getView(555)"></li>
-	<li><input class="graphs_button" type="button" value="2020" onclick="getView(666)"></li>
-	<li><input class="graphs_button" type="button" value="2021" onclick="getView(777)"></li>
-	<li><input class="graphs_button" type="button" value="2022" onclick="getView(888)"></li>
+	<li><input class="graphs_button" type="button" value="2015" onclick="getView('div111')"></li>
+	<li><input class="graphs_button" type="button" value="2016" onclick="getView('div222')"></li>
+	<li><input class="graphs_button" type="button" value="2017" onclick="getView('div333')"></li>
+	<li><input class="graphs_button" type="button" value="2018" onclick="getView('div444')"></li>
+	<li><input class="graphs_button" type="button" value="2019" onclick="getView('div555')"></li>
+	<li><input class="graphs_button" type="button" value="2020" onclick="getView('div666')"></li>
+	<li><input class="graphs_button" type="button" value="2021" onclick="getView('div777')"></li>
+	<li><input class="graphs_button" type="button" value="2022" onclick="getView('div888')"></li>
 	</ul>
-	<div id="div111">
+    {% for date, id in year %}
+	<div id={{id}}>
 		<table border="1" class="table">
    		<caption>Наиболее требуемые навыки</caption>
    		<tr>
     		<th class="first_column">Навык</th>
     		<th class="second_column">Кол-во</th>
    		</tr>
-   		<tr><td>Unity</td><td>16</td></tr>
-   		<tr><td>C#</td><td>14</td></tr>
-   		<tr><td>Git</td><td>5</td></tr>
-   		<tr><td>C++</td><td>5</td></tr>
-   		<tr><td>Android</td><td>4</td></tr>
-   		<tr><td>IOS</td><td>4</td></tr>
-   		<tr><td>Разработка компьютерных Игр</td><td>3</td></tr>
-   		<tr><td>Unity 3d</td><td>3</td></tr>
-   		<tr><td>Unity3d</td><td>2</td></tr>
-   		<tr><td>ООП</td><td>2</td></tr>
+            {% for item in skill %}
+                {% if item.year == date %}
+                <tr><td>{{item.name}}</td><td>{{ item.amount }}</td></tr>
+                {% endif %}
+            {% endfor %}
   		</table>
-  		<img src="/static/demand/images/Graph_skill_2015.png" class="graph_img_1" width="800" height="800">
+  		<img src={{ "/static/demand/images/Graph_skill_"|add:date|add:".png" }} class="graph_img_1" width="800" height="800">
   	</div>
-  	<div id="div222">
-		<table border="1" class="table">
-   		<caption>Наиболее требуемые навыки</caption>
-   		<tr>
-    		<th class="first_column">Навык</th>
-    		<th class="second_column">Кол-во</th>
-   		</tr>
-   		<tr><td>Unity</td><td>184</td></tr>
-   		<tr><td>C#</td><td>197</td></tr>
-   		<tr><td>C++</td><td>148</td></tr>
-   		<tr><td>ООП</td><td>145</td></tr>
-   		<tr><td>Java</td><td>128</td></tr>
-   		<tr><td>Git</td><td>118</td></tr>
-   		<tr><td>.Net Framework</td><td>105</td></tr>
-   		<tr><td>Английский язык</td><td>104</td></tr>
-   		<tr><td>SVN</td><td>103</td></tr>
-   		<tr><td>MS Visual Studio</td><td>103</td></tr>
-  		</table>
-  		<img src="/static/demand/images/Graph_skill_2016.png" class="graph_img_1" width="800" height="800">
-  	</div>
-  	<div id="div333">
-		<table border="1" class="table">
-   		<caption>Наиболее требуемые навыки</caption>
-   		<tr>
-    		<th class="first_column">Навык</th>
-    		<th class="second_column">Кол-во</th>
-   		</tr>
-   		<tr><td>Unity</td><td>127</td></tr>
-   		<tr><td>C#</td><td>97</td></tr>
-   		<tr><td>C++</td><td>51</td></tr>
-   		<tr><td>Game Programming</td><td>41</td></tr>
-   		<tr><td>Git</td><td>41</td></tr>
-   		<tr><td>ООП</td><td>37</td></tr>
-   		<tr><td>Android</td><td>31</td></tr>
-   		<tr><td>Java</td><td>30</td></tr>
-   		<tr><td>JavaScript</td><td>28</td></tr>
-   		<tr><td>3D</td><td>26</td></tr>
-  		</table>
-  		<img src="/static/demand/images/Graph_skill_2017.png" class="graph_img_1" width="800" height="800">
-  	</div>
-  	<div id="div444">
-		<table border="1" class="table">
-   		<caption>Наиболее требуемые навыки</caption>
-   		<tr>
-    		<th class="first_column">Навык</th>
-    		<th class="second_column">Кол-во</th>
-   		</tr>
-   		<tr><td>Unity</td><td>189</td></tr>
-   		<tr><td>C#</td><td>167</td></tr>
-   		<tr><td>Git</td><td>51</td></tr>
-   		<tr><td>JavaScript</td><td>61</td></tr>
-   		<tr><td>Английский язык</td><td>55</td></tr>
-   		<tr><td>Game Programming</td><td>51</td></tr>
-   		<tr><td>C++</td><td>51</td></tr>
-   		<tr><td>Разработка компьютерных игр</td><td>49</td></tr>
-   		<tr><td>ООП</td><td>42</td></tr>
-   		<tr><td>Android</td><td>40</td></tr>
-  		</table>
-  		<img src="/static/demand/images/Graph_skill_2018.png" class="graph_img_1" width="800" height="800">
-  	</div>
-  	<div id="div555">
-		<table border="1" class="table">
-   		<caption>Наиболее требуемые навыки</caption>
-   		<tr>
-    		<th class="first_column">Навык</th>
-    		<th class="second_column">Кол-во</th>
-   		</tr>
-   		<tr><td>Unity</td><td>335</td></tr>
-   		<tr><td>C#</td><td>290</td></tr>
-   		<tr><td>Git</td><td>112</td></tr>
-   		<tr><td>ООП</td><td>112</td></tr>
-   		<tr><td>Android</td><td>97</td></tr>
-   		<tr><td>C++</td><td>95</td></tr>
-   		<tr><td>IOS</td><td>92</td></tr>
-   		<tr><td>Game Programming</td><td>72</td></tr>
-   		<tr><td>Adobe Photoshop</td><td>68</td></tr>
-   		<tr><td>Английский язык</td><td>63</td></tr>
-  		</table>
-  		<img src="/static/demand/images/Graph_skill_2019.png" class="graph_img_1" width="800" height="800">
-  	</div>
-  	<div id="div666">
-		<table border="1" class="table">
-   		<caption>Наиболее требуемые навыки</caption>
-   		<tr>
-    		<th class="first_column">Навык</th>
-    		<th class="second_column">Кол-во</th>
-   		</tr>
-   		<tr><td>Unity</td><td>435</td></tr>
-   		<tr><td>C#</td><td>333</td></tr>
-   		<tr><td>Git</td><td>140</td></tr>
-   		<tr><td>Android</td><td>128</td></tr>
-   		<tr><td>ООП</td><td>114</td></tr>
-   		<tr><td>IOS</td><td>111</td></tr>
-   		<tr><td>C++</td><td>101</td></tr>
-   		<tr><td>Работа в команде</td><td>72</td></tr>
-   		<tr><td>Adobe Photoshop</td><td>68</td></tr>
-   		<tr><td>Английский язык</td><td>63</td></tr>
-  		</table>
-  		<img src="/static/demand/images/Graph_skill_2020.png" class="graph_img_1" width="800" height="800">
-  	</div>
-  	<div id="div777">
-		<table border="1" class="table">
-   		<caption>Наиболее требуемые навыки</caption>
-   		<tr>
-    		<th class="first_column">Навык</th>
-    		<th class="second_column">Кол-во</th>
-   		</tr>
-   		<tr><td>Unity</td><td>314</td></tr>
-   		<tr><td>C#</td><td>263</td></tr>
-   		<tr><td>ООП</td><td>113</td></tr>
-   		<tr><td>GIT</td><td>112</td></tr>
-   		<tr><td>Android</td><td>97</td></tr>
-   		<tr><td>IOS</td><td>85</td></tr>
-   		<tr><td>Английский язык</td><td>57</td></tr>
-   		<tr><td>С++</td><td>54</td></tr>
-   		<tr><td>Adobe Photoshop</td><td>47</td></tr>
-   		<tr><td>Game Programming</td><td>40</td></tr>
-  		</table>
-  		<img src="/static/demand/images/Graph_skill_2021.png" class="graph_img_1" width="800" height="800">
-  	</div>
-  	<div id="div888">
-		<table border="1" class="table">
-   		<caption>Наиболее требуемые навыки</caption>
-   		<tr>
-    		<th class="first_column">Навык</th>
-    		<th class="second_column">Кол-во</th>
-   		</tr>
-   		<tr><td>Unity</td><td>54</td></tr>
-   		<tr><td>C#</td><td>53</td></tr>
-   		<tr><td>Git</td><td>36</td></tr>
-   		<tr><td>GameDev</td><td>32</td></tr>
-   		<tr><td>Android</td><td>23</td></tr>
-   		<tr><td>Game Programming</td><td>23</td></tr>
-   		<tr><td>Английский Язык</td><td>21</td></tr>
-   		<tr><td>ООП</td><td>20</td></tr>
-   		<tr><td>Разработка компьютерных Игр</td><td>19</td></tr>
-   		<tr><td>Unity 3D</td><td>18</td></tr>
-  		</table>
-  		<img src="/static/demand/images/Graph_skill_2022.png" class="graph_img_1" width="800" height="800">
-  	</div>
+    {% endfor %}
 </div>
 <div class="empty_2"></div>
 {% endblock %}

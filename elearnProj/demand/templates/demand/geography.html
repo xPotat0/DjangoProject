@@ -1,44 +1,22 @@
 {% extends 'demand/main.html' %}
 {% block content %}
 <div class="main_1">
+    {% for city, amount, number, type in name %}
 	<div id="div11">
 		<table border="1" class="table">
    		<caption>Уровень зарплат по миру</caption>
    		<tr>
-    		<th class="first_column">Город</th>
-    		<th class="second_column">Зарплата</th>
+    		<th class="first_column">{{ city }}</th>
+    		<th class="second_column">{{ amount }}</th>
    		</tr>
-   		<tr><td>Южная Корея</td><td>222592</td></tr>
-   		<tr><td>США</td><td>219050</td></tr>
-   		<tr><td>Армения</td><td>198917</td></tr>
-   		<tr><td>Финляндия</td><td>185690</td></tr>
-   		<tr><td>Смоленск</td><td>185000</td></tr>
-   		<tr><td>Тула</td><td>185000</td></tr>
-   		<tr><td>Гомель</td><td>181980</td></tr>
-   		<tr><td>Сочи</td><td>180571</td></tr>
-   		<tr><td>Швеция</td><td>179700</td></tr>
-   		<tr><td>Кипр</td><td>169716</td></tr>
+            {% for item in geography %}
+                {% if item.type == type %}
+   		<tr><td>{{ item.city }}</td><td>{{ item.salary_amount }}</td></tr>
+                {% endif %}
+                {% endfor %}
   		</table>
-  		<img src="/static/demand/images/Graph5.png" class="graph_img" width="800" height="800">
+  		<img src={{ "/static/demand/images/Graph"|add:number|add:".png" }} class="graph_img" width="800" height="800">
   	</div>
-  	<div id="div22">
-		<table border="1" class="table">
-   		<caption>Распределение по городам</caption>
-   		<tr>
-    		<th class="first_column">Город</th>
-    		<th class="second_column">Количество</th>
-   		</tr>
-   		<tr><td>Москва</td><td>761</td></tr>
-   		<tr><td>Санкт-Петербург</td><td>397</td></tr>
-   		<tr><td>Новосибирск</td><td>303</td></tr>
-   		<tr><td>Минск</td><td>134</td></tr>
-   		<tr><td>Киев</td><td>95</td></tr>
-   		<tr><td>Ростов-на-Дону</td><td>48</td></tr>
-   		<tr><td>Алматы</td><td>46</td></tr>
-   		<tr><td>Краснодар</td><td>43</td></tr>
-   		<tr><td>Калининград</td><td>35</td></tr>
-  		</table>
-  		<img src="/static/demand/images/Graph6.png" class="graph_img" width="800" height="800">
-  	</div>
+    {% endfor %}
 </div>
 {% endblock %}
